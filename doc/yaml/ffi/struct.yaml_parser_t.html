@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `yaml_parser_t` struct in crate `yaml`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, yaml_parser_t">
+
+    <title>yaml::ffi::yaml_parser_t - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>yaml</a>::<wbr><a href='index.html'>ffi</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.yaml_alias_event_t.html'>yaml_alias_event_t</a><a class='struct ' href='struct.yaml_buffer_t.html'>yaml_buffer_t</a><a class='struct ' href='struct.yaml_document_end_event_t.html'>yaml_document_end_event_t</a><a class='struct ' href='struct.yaml_document_start_event_t.html'>yaml_document_start_event_t</a><a class='struct ' href='struct.yaml_document_t.html'>yaml_document_t</a><a class='struct ' href='struct.yaml_emitter_anchor_data_t.html'>yaml_emitter_anchor_data_t</a><a class='struct ' href='struct.yaml_emitter_scalar_data_t.html'>yaml_emitter_scalar_data_t</a><a class='struct ' href='struct.yaml_emitter_t.html'>yaml_emitter_t</a><a class='struct ' href='struct.yaml_emitter_tag_data_t.html'>yaml_emitter_tag_data_t</a><a class='struct ' href='struct.yaml_event_t.html'>yaml_event_t</a><a class='struct ' href='struct.yaml_mapping_start_event_t.html'>yaml_mapping_start_event_t</a><a class='struct ' href='struct.yaml_mark_t.html'>yaml_mark_t</a><a class='struct ' href='struct.yaml_node_pair_t.html'>yaml_node_pair_t</a><a class='struct ' href='struct.yaml_node_t.html'>yaml_node_t</a><a class='struct current' href='struct.yaml_parser_t.html'>yaml_parser_t</a><a class='struct ' href='struct.yaml_queue_t.html'>yaml_queue_t</a><a class='struct ' href='struct.yaml_scalar_event_t.html'>yaml_scalar_event_t</a><a class='struct ' href='struct.yaml_scalar_node_t.html'>yaml_scalar_node_t</a><a class='struct ' href='struct.yaml_sequence_node_t.html'>yaml_sequence_node_t</a><a class='struct ' href='struct.yaml_sequence_start_event_t.html'>yaml_sequence_start_event_t</a><a class='struct ' href='struct.yaml_stack_t.html'>yaml_stack_t</a><a class='struct ' href='struct.yaml_stream_start_event_t.html'>yaml_stream_start_event_t</a><a class='struct ' href='struct.yaml_tag_directive_list_t.html'>yaml_tag_directive_list_t</a><a class='struct ' href='struct.yaml_tag_directive_t.html'>yaml_tag_directive_t</a><a class='struct ' href='struct.yaml_version_directive_t.html'>yaml_version_directive_t</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.YamlEncoding.html'>YamlEncoding</a><a class='enum ' href='enum.YamlErrorType.html'>YamlErrorType</a><a class='enum ' href='enum.YamlScalarStyle.html'>YamlScalarStyle</a><a class='enum ' href='enum.YamlSequenceStyle.html'>YamlSequenceStyle</a><a class='enum ' href='enum.yaml_break_t.html'>yaml_break_t</a><a class='enum ' href='enum.yaml_event_type_t.html'>yaml_event_type_t</a><a class='enum ' href='enum.yaml_node_type_t.html'>yaml_node_type_t</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.new_yaml_emitter_output_t.html'>new_yaml_emitter_output_t</a><a class='fn ' href='fn.new_yaml_event_data_t.html'>new_yaml_event_data_t</a><a class='fn ' href='fn.new_yaml_node_data_t.html'>new_yaml_node_data_t</a><a class='fn ' href='fn.new_yaml_parser_input_t.html'>new_yaml_parser_input_t</a><a class='fn ' href='fn.new_yaml_parser_mem_t.html'>new_yaml_parser_mem_t</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>yaml</a>::<wbr><a href='index.html'>ffi</a>::<wbr><a class='struct' href=''>yaml_parser_t</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1743' href='../../src/yaml/ffi.rs.html#197-237'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct yaml_parser_t {
+    pub error: <a class='enum' href='../../yaml/ffi/enum.YamlErrorType.html' title='yaml::ffi::YamlErrorType'>YamlErrorType</a>,
+    pub problem: *const <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>,
+    pub problem_offset: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.size_t.html' title='libc::types::os::arch::c95::size_t'>size_t</a>,
+    pub problem_value: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub problem_mark: <a class='struct' href='../../yaml/ffi/struct.yaml_mark_t.html' title='yaml::ffi::yaml_mark_t'>yaml_mark_t</a>,
+    pub context: *const <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>,
+    pub context_mark: <a class='struct' href='../../yaml/ffi/struct.yaml_mark_t.html' title='yaml::ffi::yaml_mark_t'>yaml_mark_t</a>,
+    pub read_handler: <a class='type' href='../../yaml/ffi/type.yaml_read_handler_t.html' title='yaml::ffi::yaml_read_handler_t'>yaml_read_handler_t</a>,
+    pub read_handler_data: *const <a class='enum' href='http://doc.rust-lang.org/nightly/libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+    pub input: <a class='type' href='../../yaml/ffi/type.yaml_parser_input_t.html' title='yaml::ffi::yaml_parser_input_t'>yaml_parser_input_t</a>,
+    pub eof: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub buffer: <a class='struct' href='../../yaml/ffi/struct.yaml_buffer_t.html' title='yaml::ffi::yaml_buffer_t'>yaml_buffer_t</a>,
+    pub unread: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.size_t.html' title='libc::types::os::arch::c95::size_t'>size_t</a>,
+    pub raw_buffer: <a class='struct' href='../../yaml/ffi/struct.yaml_buffer_t.html' title='yaml::ffi::yaml_buffer_t'>yaml_buffer_t</a>,
+    pub encoding: <a class='enum' href='../../yaml/ffi/enum.YamlEncoding.html' title='yaml::ffi::YamlEncoding'>YamlEncoding</a>,
+    pub offset: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.size_t.html' title='libc::types::os::arch::c95::size_t'>size_t</a>,
+    pub mark: <a class='struct' href='../../yaml/ffi/struct.yaml_mark_t.html' title='yaml::ffi::yaml_mark_t'>yaml_mark_t</a>,
+    pub stream_start_produced: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub stream_end_produced: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub flow_level: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub tokens: <a class='struct' href='../../yaml/ffi/struct.yaml_queue_t.html' title='yaml::ffi::yaml_queue_t'>yaml_queue_t</a>,
+    pub tokens_parsed: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.size_t.html' title='libc::types::os::arch::c95::size_t'>size_t</a>,
+    pub token_available: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub indents: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub indent: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub simple_key_allowed: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub simple_keys: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub states: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub parser_state: <a class='type' href='http://doc.rust-lang.org/nightly/libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub marks: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub tag_directives: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub aliases: <a class='struct' href='../../yaml/ffi/struct.yaml_stack_t.html' title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a>,
+    pub document: *const <a class='struct' href='../../yaml/ffi/struct.yaml_document_t.html' title='yaml::ffi::yaml_document_t'>yaml_document_t</a>,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.error'><a class='stability Unmarked' title='No stability level'></a><code>error</code></td><td></td></tr><tr><td id='structfield.problem'><a class='stability Unmarked' title='No stability level'></a><code>problem</code></td><td></td></tr><tr><td id='structfield.problem_offset'><a class='stability Unmarked' title='No stability level'></a><code>problem_offset</code></td><td></td></tr><tr><td id='structfield.problem_value'><a class='stability Unmarked' title='No stability level'></a><code>problem_value</code></td><td></td></tr><tr><td id='structfield.problem_mark'><a class='stability Unmarked' title='No stability level'></a><code>problem_mark</code></td><td></td></tr><tr><td id='structfield.context'><a class='stability Unmarked' title='No stability level'></a><code>context</code></td><td></td></tr><tr><td id='structfield.context_mark'><a class='stability Unmarked' title='No stability level'></a><code>context_mark</code></td><td></td></tr><tr><td id='structfield.read_handler'><a class='stability Unmarked' title='No stability level'></a><code>read_handler</code></td><td></td></tr><tr><td id='structfield.read_handler_data'><a class='stability Unmarked' title='No stability level'></a><code>read_handler_data</code></td><td></td></tr><tr><td id='structfield.input'><a class='stability Unmarked' title='No stability level'></a><code>input</code></td><td></td></tr><tr><td id='structfield.eof'><a class='stability Unmarked' title='No stability level'></a><code>eof</code></td><td></td></tr><tr><td id='structfield.buffer'><a class='stability Unmarked' title='No stability level'></a><code>buffer</code></td><td></td></tr><tr><td id='structfield.unread'><a class='stability Unmarked' title='No stability level'></a><code>unread</code></td><td></td></tr><tr><td id='structfield.raw_buffer'><a class='stability Unmarked' title='No stability level'></a><code>raw_buffer</code></td><td></td></tr><tr><td id='structfield.encoding'><a class='stability Unmarked' title='No stability level'></a><code>encoding</code></td><td></td></tr><tr><td id='structfield.offset'><a class='stability Unmarked' title='No stability level'></a><code>offset</code></td><td></td></tr><tr><td id='structfield.mark'><a class='stability Unmarked' title='No stability level'></a><code>mark</code></td><td></td></tr><tr><td id='structfield.stream_start_produced'><a class='stability Unmarked' title='No stability level'></a><code>stream_start_produced</code></td><td></td></tr><tr><td id='structfield.stream_end_produced'><a class='stability Unmarked' title='No stability level'></a><code>stream_end_produced</code></td><td></td></tr><tr><td id='structfield.flow_level'><a class='stability Unmarked' title='No stability level'></a><code>flow_level</code></td><td></td></tr><tr><td id='structfield.tokens'><a class='stability Unmarked' title='No stability level'></a><code>tokens</code></td><td></td></tr><tr><td id='structfield.tokens_parsed'><a class='stability Unmarked' title='No stability level'></a><code>tokens_parsed</code></td><td></td></tr><tr><td id='structfield.token_available'><a class='stability Unmarked' title='No stability level'></a><code>token_available</code></td><td></td></tr><tr><td id='structfield.indents'><a class='stability Unmarked' title='No stability level'></a><code>indents</code></td><td></td></tr><tr><td id='structfield.indent'><a class='stability Unmarked' title='No stability level'></a><code>indent</code></td><td></td></tr><tr><td id='structfield.simple_key_allowed'><a class='stability Unmarked' title='No stability level'></a><code>simple_key_allowed</code></td><td></td></tr><tr><td id='structfield.simple_keys'><a class='stability Unmarked' title='No stability level'></a><code>simple_keys</code></td><td></td></tr><tr><td id='structfield.states'><a class='stability Unmarked' title='No stability level'></a><code>states</code></td><td></td></tr><tr><td id='structfield.parser_state'><a class='stability Unmarked' title='No stability level'></a><code>parser_state</code></td><td></td></tr><tr><td id='structfield.marks'><a class='stability Unmarked' title='No stability level'></a><code>marks</code></td><td></td></tr><tr><td id='structfield.tag_directives'><a class='stability Unmarked' title='No stability level'></a><code>tag_directives</code></td><td></td></tr><tr><td id='structfield.aliases'><a class='stability Unmarked' title='No stability level'></a><code>aliases</code></td><td></td></tr><tr><td id='structfield.document'><a class='stability Unmarked' title='No stability level'></a><code>document</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/kinds/trait.Copy.html' title='core::kinds::Copy'>Copy</a> for <a class='struct' href='../../yaml/ffi/struct.yaml_parser_t.html' title='yaml::ffi::yaml_parser_t'>yaml_parser_t</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "yaml";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

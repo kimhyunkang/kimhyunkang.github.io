@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ffi` mod in crate `yaml`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ffi">
+
+    <title>yaml::ffi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>yaml</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../codecs/index.html'>codecs</a><a class='mod ' href='../constructor/index.html'>constructor</a><a class='mod ' href='../document/index.html'>document</a><a class='mod ' href='../emitter/index.html'>emitter</a><a class='mod ' href='../error/index.html'>error</a><a class='mod ' href='../event/index.html'>event</a><a class='mod current' href='../ffi/index.html'>ffi</a><a class='mod ' href='../parser/index.html'>parser</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='../fn.parse_bytes.html'>parse_bytes</a><a class='fn ' href='../fn.parse_bytes_utf8.html'>parse_bytes_utf8</a><a class='fn ' href='../fn.parse_io.html'>parse_io</a><a class='fn ' href='../fn.parse_io_utf8.html'>parse_io_utf8</a><a class='fn ' href='../fn.version.html'>version</a><a class='fn ' href='../fn.version_string.html'>version_string</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>yaml</a>::<wbr><a class='mod' href=''>ffi</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-13' href='../../src/yaml/ffi.rs.html#1-511'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_alias_event_t.html'
+                               title='yaml::ffi::yaml_alias_event_t'>yaml_alias_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_buffer_t.html'
+                               title='yaml::ffi::yaml_buffer_t'>yaml_buffer_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_document_end_event_t.html'
+                               title='yaml::ffi::yaml_document_end_event_t'>yaml_document_end_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_document_start_event_t.html'
+                               title='yaml::ffi::yaml_document_start_event_t'>yaml_document_start_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_document_t.html'
+                               title='yaml::ffi::yaml_document_t'>yaml_document_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_emitter_anchor_data_t.html'
+                               title='yaml::ffi::yaml_emitter_anchor_data_t'>yaml_emitter_anchor_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_emitter_scalar_data_t.html'
+                               title='yaml::ffi::yaml_emitter_scalar_data_t'>yaml_emitter_scalar_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_emitter_t.html'
+                               title='yaml::ffi::yaml_emitter_t'>yaml_emitter_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_emitter_tag_data_t.html'
+                               title='yaml::ffi::yaml_emitter_tag_data_t'>yaml_emitter_tag_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_event_t.html'
+                               title='yaml::ffi::yaml_event_t'>yaml_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_mapping_start_event_t.html'
+                               title='yaml::ffi::yaml_mapping_start_event_t'>yaml_mapping_start_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_mark_t.html'
+                               title='yaml::ffi::yaml_mark_t'>yaml_mark_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_node_pair_t.html'
+                               title='yaml::ffi::yaml_node_pair_t'>yaml_node_pair_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_node_t.html'
+                               title='yaml::ffi::yaml_node_t'>yaml_node_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_parser_t.html'
+                               title='yaml::ffi::yaml_parser_t'>yaml_parser_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_queue_t.html'
+                               title='yaml::ffi::yaml_queue_t'>yaml_queue_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_scalar_event_t.html'
+                               title='yaml::ffi::yaml_scalar_event_t'>yaml_scalar_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_scalar_node_t.html'
+                               title='yaml::ffi::yaml_scalar_node_t'>yaml_scalar_node_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_sequence_node_t.html'
+                               title='yaml::ffi::yaml_sequence_node_t'>yaml_sequence_node_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_sequence_start_event_t.html'
+                               title='yaml::ffi::yaml_sequence_start_event_t'>yaml_sequence_start_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_stack_t.html'
+                               title='yaml::ffi::yaml_stack_t'>yaml_stack_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_stream_start_event_t.html'
+                               title='yaml::ffi::yaml_stream_start_event_t'>yaml_stream_start_event_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_tag_directive_list_t.html'
+                               title='yaml::ffi::yaml_tag_directive_list_t'>yaml_tag_directive_list_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_tag_directive_t.html'
+                               title='yaml::ffi::yaml_tag_directive_t'>yaml_tag_directive_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.yaml_version_directive_t.html'
+                               title='yaml::ffi::yaml_version_directive_t'>yaml_version_directive_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.YamlEncoding.html'
+                               title='yaml::ffi::YamlEncoding'>YamlEncoding</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.YamlErrorType.html'
+                               title='yaml::ffi::YamlErrorType'>YamlErrorType</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.YamlScalarStyle.html'
+                               title='yaml::ffi::YamlScalarStyle'>YamlScalarStyle</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.YamlSequenceStyle.html'
+                               title='yaml::ffi::YamlSequenceStyle'>YamlSequenceStyle</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.yaml_break_t.html'
+                               title='yaml::ffi::yaml_break_t'>yaml_break_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.yaml_event_type_t.html'
+                               title='yaml::ffi::yaml_event_type_t'>yaml_event_type_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.yaml_node_type_t.html'
+                               title='yaml::ffi::yaml_node_type_t'>yaml_node_type_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.new_yaml_emitter_output_t.html'
+                               title='yaml::ffi::new_yaml_emitter_output_t'>new_yaml_emitter_output_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.new_yaml_event_data_t.html'
+                               title='yaml::ffi::new_yaml_event_data_t'>new_yaml_event_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.new_yaml_node_data_t.html'
+                               title='yaml::ffi::new_yaml_node_data_t'>new_yaml_node_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.new_yaml_parser_input_t.html'
+                               title='yaml::ffi::new_yaml_parser_input_t'>new_yaml_parser_input_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.new_yaml_parser_mem_t.html'
+                               title='yaml::ffi::new_yaml_parser_mem_t'>new_yaml_parser_mem_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_alias_event_initialize.html'
+                               title='yaml::ffi::yaml_alias_event_initialize'>yaml_alias_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_add_mapping.html'
+                               title='yaml::ffi::yaml_document_add_mapping'>yaml_document_add_mapping</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_add_scalar.html'
+                               title='yaml::ffi::yaml_document_add_scalar'>yaml_document_add_scalar</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_add_sequence.html'
+                               title='yaml::ffi::yaml_document_add_sequence'>yaml_document_add_sequence</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_delete.html'
+                               title='yaml::ffi::yaml_document_delete'>yaml_document_delete</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_end_event_initialize.html'
+                               title='yaml::ffi::yaml_document_end_event_initialize'>yaml_document_end_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_get_node.html'
+                               title='yaml::ffi::yaml_document_get_node'>yaml_document_get_node</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_get_root_node.html'
+                               title='yaml::ffi::yaml_document_get_root_node'>yaml_document_get_root_node</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_initialize.html'
+                               title='yaml::ffi::yaml_document_initialize'>yaml_document_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_document_start_event_initialize.html'
+                               title='yaml::ffi::yaml_document_start_event_initialize'>yaml_document_start_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_emitter_delete.html'
+                               title='yaml::ffi::yaml_emitter_delete'>yaml_emitter_delete</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_emitter_emit.html'
+                               title='yaml::ffi::yaml_emitter_emit'>yaml_emitter_emit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_emitter_flush.html'
+                               title='yaml::ffi::yaml_emitter_flush'>yaml_emitter_flush</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_emitter_initialize.html'
+                               title='yaml::ffi::yaml_emitter_initialize'>yaml_emitter_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_emitter_set_output.html'
+                               title='yaml::ffi::yaml_emitter_set_output'>yaml_emitter_set_output</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_event_delete.html'
+                               title='yaml::ffi::yaml_event_delete'>yaml_event_delete</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_get_version.html'
+                               title='yaml::ffi::yaml_get_version'>yaml_get_version</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_get_version_string.html'
+                               title='yaml::ffi::yaml_get_version_string'>yaml_get_version_string</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_mapping_end_event_initialize.html'
+                               title='yaml::ffi::yaml_mapping_end_event_initialize'>yaml_mapping_end_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_mapping_start_event_initialize.html'
+                               title='yaml::ffi::yaml_mapping_start_event_initialize'>yaml_mapping_start_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_delete.html'
+                               title='yaml::ffi::yaml_parser_delete'>yaml_parser_delete</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_initialize.html'
+                               title='yaml::ffi::yaml_parser_initialize'>yaml_parser_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_load.html'
+                               title='yaml::ffi::yaml_parser_load'>yaml_parser_load</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_parse.html'
+                               title='yaml::ffi::yaml_parser_parse'>yaml_parser_parse</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_set_encoding.html'
+                               title='yaml::ffi::yaml_parser_set_encoding'>yaml_parser_set_encoding</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_set_input.html'
+                               title='yaml::ffi::yaml_parser_set_input'>yaml_parser_set_input</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_parser_set_input_string.html'
+                               title='yaml::ffi::yaml_parser_set_input_string'>yaml_parser_set_input_string</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_scalar_event_initialize.html'
+                               title='yaml::ffi::yaml_scalar_event_initialize'>yaml_scalar_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_sequence_end_event_initialize.html'
+                               title='yaml::ffi::yaml_sequence_end_event_initialize'>yaml_sequence_end_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_sequence_start_event_initialize.html'
+                               title='yaml::ffi::yaml_sequence_start_event_initialize'>yaml_sequence_start_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_stream_end_event_initialize.html'
+                               title='yaml::ffi::yaml_stream_end_event_initialize'>yaml_stream_end_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.yaml_stream_start_event_initialize.html'
+                               title='yaml::ffi::yaml_stream_start_event_initialize'>yaml_stream_start_event_initialize</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_char_t.html'
+                               title='yaml::ffi::yaml_char_t'>yaml_char_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_emitter_output_t.html'
+                               title='yaml::ffi::yaml_emitter_output_t'>yaml_emitter_output_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_event_data_t.html'
+                               title='yaml::ffi::yaml_event_data_t'>yaml_event_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_node_data_t.html'
+                               title='yaml::ffi::yaml_node_data_t'>yaml_node_data_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_parser_input_t.html'
+                               title='yaml::ffi::yaml_parser_input_t'>yaml_parser_input_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_parser_mem_t.html'
+                               title='yaml::ffi::yaml_parser_mem_t'>yaml_parser_mem_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_read_handler_t.html'
+                               title='yaml::ffi::yaml_read_handler_t'>yaml_read_handler_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.yaml_write_handler_t.html'
+                               title='yaml::ffi::yaml_write_handler_t'>yaml_write_handler_t</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "yaml";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
